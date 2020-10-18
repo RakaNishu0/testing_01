@@ -28,9 +28,31 @@ print(console.upper())                      # upper() 모든 문자열을 대문
 print(console[0].isupper())                 # isupper() 해당 문자가 대문자인가? T or F
 print(len(console))                         # len() 문자열의 길이
 print(console.replace("Xbox", "PS5"))       # replace() 문자열을 찾아서 치환. replace(타겟, 치환)
+print(console.count("i"))                   # count() 문자열에서 해당 문자가 몇번 나타났는지를 출력
 
 index = console.index("A")                  # index() 몇번째 자리에 해당 문자가 위치해 있는지 찾아줌
 print(index)
 print(console.find("a"))                    # find() 몇번재 자리에 해당 문자가 있는지 찾아줌
 print(console.find('PS5'))                  # find() 는 index()와 달리, 결과가 없어도 에러를 뱉지 않고 -1 을 반환하면서 프로그램을 종료시키지는 않는다.
-print(console.index('PS5'))                 # index() 는 찾을 수 없는 문자열인 경우 Error 를 반환하며 프로그램을 강제 종료한다.
+# print(console.index('PS5'))                 # index() 는 찾을 수 없는 문자열인 경우 Error 를 반환하며 프로그램을 강제 종료한다.
+
+# 문자열 포맷
+a = 10
+s = "yoda"
+b = "A"
+print("Me is %d years old" % a)             # %d = 정수(int)
+print("Me is %s" % s)                           # %s = 문자열(string), 하지만 정수도 정상적으로 받는다.
+print("Me is %s years old" % a)
+print("Apple is starting %c" % b)               # %c = 문자(character) 1개만
+print("I love %s and %s color" % ("Red", "Blue"))   # 여러개를 사용할 경우에는 그 수만큼 사용하고 ()안에 넣어줌
+
+print("Me is {} years old".format(15))          # {} 사용하는 대입변수 사용
+print("I love {} and {} color".format("Red", "Blue"))   # 마찬가지로 복수개의 대입 사용 가능
+print("I love {1} and {0} color".format("Red", "Blue")) # {}안에 숫자 표시는 index의 순서로, 자료형의 순서와 별개로 지정하여 출력할 수 있다.
+
+print("I am {age} years and love {color} color".format(age = 17, color="Red"))  # {}안의 변수를 format() 안에서 지정할 수 있다.
+
+age = 18
+color = "Blue"
+print('Me is {age} years and love {color} color')       # f 함수?를 사용하지 않음
+print(f'Me is {age} years and love {color} color')      # f 함수?를 사용해서 문자열 안에 변수를 적용가능
