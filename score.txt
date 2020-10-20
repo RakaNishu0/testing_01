@@ -1,0 +1,4 @@
+math : 0
+engl : 10
+science : 100
+ode : 100
