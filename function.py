@@ -50,3 +50,9 @@ def std_weight(height, gender):
 height = 160
 gender = "남자"
 print("키 {0}cm {1}의 표준 체중은 {2}kg 입니다.".format(height, gender, std_weight(height, gender)))
+
+
+def practice():
+    pass            # pass = 아무것도 하지 않고 일단 패스한다. 함수가 완성된 것처럼 보여지기만 한다. (에러를 뱉지 않는다)
+
+practice()
