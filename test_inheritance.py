@@ -26,8 +26,8 @@ class AttackUnit(Unit):
 
 # HealingUnit:
 class HealUnit(Unit):
-    def __init__(self, name, hp, heal):
-        Unit.__init__(self, name, hp)
+    def __init__(self, name, hp, speed, heal):
+        Unit.__init__(self, name, hp, speed)
         self.heal = heal
 
     def healing(self, target):
@@ -42,6 +42,7 @@ class Flyable:
 
     def fly(self, location):
         print(f"{self.name} : {location}방향으로 날아감. [속도: {self.f_speed}]")
+
 
 # Multi inheritance
 class FlyAttackUnit(AttackUnit, Flyable):
